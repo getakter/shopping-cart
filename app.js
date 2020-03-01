@@ -20,18 +20,14 @@ console.log(subtotalArray)
 //Initiate Product price
 const productPrice = [219, 59]
 
-//Need work make dynamic by getting value from loop
+//Need work to make this section dynamic (receive value from loop)
     removeItem.item(0).addEventListener('click', function() {
         let counter1 = itemCountClass.item(0).value
         counter1 = parseInt(counter1)
         deductFromSubTotal1 = counter1 * productPrice[0]
-        console.log(deductFromSubTotal1)
         subtotalArray= subtotalArray.filter((i) => i != productPrice[0])
         itemClass.item(0).style.display = 'none'
         calculateAndShowAmount ()
-        if(subtotalArray.length < 1 ) {
-            calculateArea.style.display = "none"
-        }
 
     })
 
@@ -39,15 +35,9 @@ const productPrice = [219, 59]
         let counter2 = itemCountClass.item(1).value
         counter2 = parseInt(counter2)
         deductFromSubTotal2 = counter2 * productPrice[1]
-        console.log(deductFromSubTotal2)
         subtotalArray =  subtotalArray.filter((i) => i != productPrice[1])
-        console.log(subtotalArray)
         itemClass.item(1).style.display = 'none'
         calculateAndShowAmount ()
-        if(subtotalArray.length < 1 ) {
-            calculateArea.style.display = "none"   
-
-        }
     })
 
    

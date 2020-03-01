@@ -1,10 +1,25 @@
 body{
 	background: #fff;
+	font-family: 'Roboto Condensed';
 }
 .cart{
 	margin: 100px 0;
 	background-color: #F6F5FA;;
 	padding: 60px 0;
+	text-align: center;
+}
+
+.reload {
+    font-size: 28px;
+    color: #f7f9f9;
+    margin: 17px;
+    background: #FF9800;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.btn {
+	margin: 10px;
 }
 .total-price{
 	padding-bottom: 15px;

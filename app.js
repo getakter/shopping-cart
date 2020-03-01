@@ -34,6 +34,7 @@ const productPrice = [219, 59]
             calculateArea.style.display = 'none'
             
             cart.innerHTML = "<h4 class='text-center'> Please reload the page to add item in cart  </h4>"
+            cart.innerHTML += "<a href='https://getakter.github.io/shopping-cart'> <i class='reload fas fa-redo-alt'></i> </a>"
         }
     })
 
@@ -48,10 +49,10 @@ const productPrice = [219, 59]
             console.log('empty')
             calculateArea.style.display = 'none'
             cart.innerHTML = "<h4 class='text-center'>Please reload the page to add item in your cart!  </h4>"
+            cart.innerHTML += "<a href='https://getakter.github.io/shopping-cart'> <i class='reload fas fa-redo-alt'></i> </a>"
         }
     })
 
-   
 
 //SubTotal Business
 

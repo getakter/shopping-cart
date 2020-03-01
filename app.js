@@ -8,6 +8,7 @@ let subTotalId = document.getElementById('sub-total')
 let taxAmountId = document.getElementById('tax-amount')
 let totalAmountId = document.getElementById('total-amount')
 let calculateArea = document.getElementById('calculate-area')
+let cart = document.getElementById('cart')
 
 let removeItem = document.getElementsByClassName('remove-item')
 
@@ -28,7 +29,12 @@ const productPrice = [219, 59]
         subtotalArray= subtotalArray.filter((i) => i != productPrice[0])
         itemClass.item(0).style.display = 'none'
         calculateAndShowAmount ()
-
+        
+        if( itemClass.item(0).style.display == 'none' && itemClass.item(1).style.display == 'none' ) {
+            calculateArea.style.display = 'none'
+            
+            cart.innerHTML = "<h4 class='text-center'> Please reload the page to add item in cart  </h4>"
+        }
     })
 
     removeItem.item(1).addEventListener('click', function() {
@@ -38,6 +44,11 @@ const productPrice = [219, 59]
         subtotalArray =  subtotalArray.filter((i) => i != productPrice[1])
         itemClass.item(1).style.display = 'none'
         calculateAndShowAmount ()
+        if( itemClass.item(0).style.display == 'none' && itemClass.item(1).style.display == 'none' ) {
+            console.log('empty')
+            calculateArea.style.display = 'none'
+            cart.innerHTML = "<h4 class='text-center'>Please reload the page to add item in your cart!  </h4>"
+        }
     })
 
    
